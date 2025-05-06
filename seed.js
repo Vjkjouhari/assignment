@@ -7,10 +7,10 @@ const Notification = require("./models/Notification");
 const Post = require("./models/Post");
 const Follow = require("./models/Follow");
 
-const TOTAL_USERS = 1000;
-const TOTAL_POSTS = 5000;
-const TOTAL_NOTIFICATIONS = 10000;
-const TOTAL_FOLLOWS = 3000;
+const TOTAL_USERS = 10;
+const TOTAL_POSTS = 40;
+const TOTAL_NOTIFICATIONS = 100;
+const TOTAL_FOLLOWS = 10;
 
 async function seedUsers() {
   try {
@@ -107,7 +107,7 @@ async function seedUsers() {
     }
 
     await Post.insertMany(fakePosts);
-    console.log(`✅ Inserted ${fakePosts.length} posts`);
+    console.log(` Inserted ${fakePosts.length} posts`);
   } catch (err) {
     console.error("Seeding failed:", err);
   } finally {
